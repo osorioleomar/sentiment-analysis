@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.positive {
+    color: green;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.negative {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}

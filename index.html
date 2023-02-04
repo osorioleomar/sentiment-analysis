@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Review Sentiment Classifier</title>
+    <style>
+        body {
+            background-color: lightblue;
+            /*background-image: url('bg-pattern.png');*/
+        }
+        .container {
+	        width: 500px;
+	        height: 350px;
+	        margin: 50px auto;
+	        padding: 20px;
+	        background-color: white;
+	        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+	    }
+
+	    h1 {
+	        text-align: center;
+	        font-family: Helvetica;
+	    }
+
+	    form {
+	        text-align: center;
+	    }
+
+	    textarea {
+	        width: 90%;
+	        height: 200px;
+	        margin: 20px auto;
+	        display: block;
+	        font-family: Helvetica;
+	        font-size: 18px;
+	        padding: 10px;
+	        border-radius: 5px;
+	        border: 1px solid #ccc;
+	    }
+
+	    textarea::placeholder {
+	        font-style: italic;
+	    }
+
+	    button[type="submit"] {
+	        width: 50%;
+	        height: 40px;
+	        margin: 20px auto;
+	        display: block;
+	        font-family: Helvetica;
+	        font-size: 18px;
+	        background-color: blue;
+	        color: white;
+	        border: none;
+	        border-radius: 5px;
+	        cursor: pointer;
+	        transition: background-color 0.2s ease;
+	    }
+
+	    button[type="submit"]:hover {
+	        background-color: #0066ff;
+	    }
+
+	    p {
+	        font-family: Helvetica;
+	        font-size: 18px;
+	        text-align: center;
+	        margin: 20px auto;
+	    }
+
+	    .positive {
+	        background-color: transparent;
+	        background-color: green;
+	    }
+
+	    .negative {
+	        background-color: transparent;
+	        background-color: red;
+	    }
+	</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Review Sentiment Classifier</h1>
+        <form action="/" method="post">
+            <textarea name="review" placeholder="Enter your movie review here"></textarea>
+            <button type="submit">Classify</button>
+        </form>
+        {% if sentiment %}
+        	<p>{{ orig_review }}</p>
+            <p class="{{ sentiment|lower }}">The review is <b>{{ sentiment }}</b>.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
